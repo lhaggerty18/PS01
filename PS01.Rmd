@@ -18,4 +18,23 @@ knitr::opts_chunk$set(echo = TRUE, fig.width=8, fig.height=4.5)
 library(tidyverse)
 ```
 
+```{r}
+train <- read_csv("https://rudeboybert.github.io/STAT495/static/Titanic/train.csv")
+test <- read_csv("https://rudeboybert.github.io/STAT495/static/Titanic/test.csv")
+submission <- read_csv("https://rudeboybert.github.io/STAT495/static/Titanic/gender_submission.csv")
+
+glimpse(train)
+glimpse(test)
+glimpse(submission)
+
+View(train)
+View(test)
+View(submission)
+```
+
+```{r}
+test %>% 
+  left_join(submission, by="PassengerId") %>% 
+  select(PassengerId, Sex, Survived)
+```
 
