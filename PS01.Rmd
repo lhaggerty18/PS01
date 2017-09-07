@@ -1,6 +1,6 @@
 ---
 title: "STAT/MATH 495: Problem Set 01"
-author: "WRITE YOUR NAME HERE"
+author: "Luke Haggerty"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document:
