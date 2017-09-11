@@ -35,6 +35,6 @@ View(submission)
 ```{r}
 test %>% 
   left_join(submission, by="PassengerId") %>% 
-  select(PassengerId, Sex, Survived)
+  select(PassengerId, Age, Survived)
 ```
 
